@@ -719,23 +719,18 @@ border: 2px solid blue;
     }
 /*=============MODAL WINDOW=====================*/
 
-.tfggfgffg {display: inline-block;
-    padding: 24px;}
-
-    .modal-form-label {display: flex;
-margin-bottom: 4px;
+.modal-form { display: flex;
+    flex-direction: column;
+padding: 24px;
+width: 100%;
+font-family: inherit;
     font-size: 12px;
-    line-height: 1.33;
-    letter-spacing: 0.04em;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
 }
+    
 
-    .modal-form-input {display: flex;
-        min-width: 360px;
-    margin-bottom: 8px;
-border: 1px solid rgba(33, 33, 33, 0.2);
- border-radius: 4px;}
-
-    .modal-title { font-family: inherit;
+  .modal-title { font-family: inherit;
         
     font-weight: 500;
     font-size: 16px;
@@ -745,23 +740,81 @@ border: 1px solid rgba(33, 33, 33, 0.2);
     margin-bottom: 14px;
 color: var(--primary-color);}
 
-.frrr {width: 10px;
-height: 10px;
-background-color: #31D0AA;}
+.modal-icon-container {position: relative;
+margin-bottom: 8px;}
 
-.comment-text { display: block;
+    .modal-form-label {display: block;
+margin-bottom: 4px;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.04em;
+    color: #8E8F99;
+}
+
+    .modal-form-input {width: 100%;
+       
+padding: 14px 19px;
+padding-left: 38px;
+
+font-family: inherit;
+font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.04em;
+   
+border: 1px solid rgba(33, 33, 33, 0.2);
+ border-radius: 4px;
+}
+
+
+.modal-form-input-icon {position: absolute;
+top: 50%;
+left: 19px;
+transform: translateY(-50%);
+display: block;
+width: 18px;
+height: 24px;
+
+
+}
+
+.modal-form-input:focus {
+    outline: none;
+    border-color: var(--accent-color);}
+
+    .modal-form-input:focus + .modal-form-input-icon {
+        fill: var(--accent-color);
+    }
+
+
+.modal-form-comment-text {width: 100%;
+height: 120px;
+resize: none;
+padding: 8px 16px;
+border-radius: 4px;}
+
+
+
+.modal-form-comment-text:focus {
+    outline: none;
+    border-color: var(--accent-color);}
+
+
+    .modal-form-comment-text::placeholder {
+        font-family: inherit;
+        font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.04em;
+ color: #8E8F99;}
+
+.comment-text {
    font-size: 12px;
-min-width: 360px;
+
     margin-bottom: 40px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
 color: #4D5AE5;}
 
-.modal-form- { font-family: inherit;
-    font-size: 12px;
-    line-height: 1.16;
-    letter-spacing: 0.01em;
-color: #8E8F99;}
+
  
 
 
@@ -788,7 +841,7 @@ background-color: #31D0AA;}
 }
 
 
-.backdrop.is-hidden {
+.backdrop. {
     opacity: 0;
     pointer-events: none;
 }
